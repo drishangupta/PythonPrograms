@@ -1,0 +1,29 @@
+def get_vehicle_data():
+  intersections = {}
+
+  for i in range(1, 5):
+    print(f"Enter data for Intersection {i}:")
+    vehicle_counts = {}
+    vehicle_types = ["car", "truck", "motorcycle", "emergency vehicles"]
+
+    for vehicle_type in vehicle_types:
+      count = int(input(f"Enter the number of {vehicle_type}s: "))
+      vehicle_counts[vehicle_type] = count
+
+    intersections[f"Intersection {i}"] = vehicle_counts
+
+  return intersections
+
+def display_vehicle_data(intersections):
+  for intersection, vehicle_counts in intersections.items():
+      print(f"\nData for {intersection}:")
+  for vehicle_type, count in vehicle_counts.items():
+      print(f"{vehicle_type}s: {count}")
+      
+
+
+# Get vehicle data from the user
+vehicle_data = get_vehicle_data()
+
+# Display the stored data
+display_vehicle_data(vehicle_data)

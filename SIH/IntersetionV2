@@ -1,0 +1,14 @@
+def intersection_data():
+    intersection1={"Cars":0,"Trucks":0,"MotorCycles":0,"Ambulances":0}
+    intersection2={"Cars":0,"Trucks":0,"MotorCycles":0,"Ambulances":0}
+    intersection3={"Cars":0,"Trucks":0,"MotorCycles":0,"Ambulances":0}
+    intersection4={"Cars":0,"Trucks":0,"MotorCycles":0,"Ambulances":0}
+    intersections=[intersection1,intersection2,intersection3,intersection4]
+    l1=["Cars","Trucks","MotorCycles","Ambulances"]
+    for i in l1:
+      print("Intersection",(l1.index(i)+1))
+      for j in l1:
+        count = int(input(f"Enter the number of {i}: "))
+        intersections[l1.index(i)][i]=count
+    print(intersection2)
+intersection_data()

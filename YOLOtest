@@ -1,0 +1,7 @@
+def sss():
+    from ultralytics import YOLO
+
+    model = YOLO('best.pt')
+    model.val()  # It'll automatically evaluate the data you trained.
+if __name__ =="__main__":
+    sss()
